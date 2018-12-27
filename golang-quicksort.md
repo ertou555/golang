@@ -47,5 +47,6 @@
 	}
 	
 	重点：
-	1. for j >= k && (*arr)[j] >= temp{//temp <= (*arr)[j] && k <= j{  注释条件temp在前面则会导致切片越界panic，必须将j >= k条件放在前面；
+	1. for j >= k && (*arr)[j] >= temp{//temp <= (*arr)[j] && k <= j{  注释条件temp在前面则会导致切片越界panic，
+	必须将j >= k条件放在前面；
 	2. if k < high - 1{ //这里也可以直接写成k < high (这样会增加执行次数)，通过count计数计算递归次数。
