@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func callFunc(m map[string] int){
+	m["age"] = 100
+	fmt.Println("func:",m)
+}
+func main(){
+	//method 1:
+	var mmap map[string]int   //only statement, mmap = nil; need to initial
+	//mmap = make(map[string]int)
+	mmap = map[string]int{}
+
+	//method 2:
+	//mmap := map[string]int{}
+	//method 3:
+	//mmap := make(map[string]int)
+
+	//mmap["name"]=11
+
+	fmt.Println("before call func:",mmap)
+	callFunc(mmap)
+	fmt.Println("after call func:",mmap)
+}
