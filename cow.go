@@ -119,7 +119,6 @@ func mapToSlice(str string) []int64 {
 	sort.Slice(s, func(i, j int) bool {
 		return s[i] > s[j]
 	})
-
 	return s
 }
 
